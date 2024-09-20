@@ -1,0 +1,99 @@
+.App {
+  font-family: 'Arial', sans-serif;
+  padding: 20px;
+  max-width: 800px;
+  margin: auto;
+}
+
+.history-container {
+  border: 1px solid #ccc;
+  padding: 10px;
+  height: 82vh;
+  overflow-y: scroll;
+  margin-bottom: 20px;
+}
+
+.message {
+  padding: 10px;
+  margin: 5px;
+}
+
+.message.user {
+  background-color: #f3f3f3;
+}
+
+.message.server {
+  background-color: #e6f7ff;
+}
+
+.input-area {
+  display: flex;
+  align-items: flex-end;
+}
+
+.textarea {
+  width: 80%;
+  height: 100px;
+  padding: 10px;
+  margin-right: 10px;
+}
+
+.send-button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.send-button:hover {
+  background-color: #0056b3;
+}
+
+.send-button.disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.textarea-editable {
+  width: 95%;
+  height: 60px;
+  padding: 10px;
+  margin: 10px 0;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+}
+
+.feedback-icons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: space-around;
+  justify-content: space-evenly;
+  margin-left: 20px;
+}
+
+.feedback-icons button {
+  border: none;
+  background-color: transparent;
+}
+
+.feedback-icons button.selected {
+  border: none;
+  background-color: rgba(0, 123, 255, 0.2);
+  border-radius: 4px;
+}
+
+.feedback-icons .saveBtn {
+  background-color: #28a745;
+  padding: 10px 20px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.feedback-icons .saveBtn:hover {
+  background-color: #218838;
+}
