@@ -13,9 +13,12 @@ function App() {
   const [selectedTag, setSelectedTag] = useState('');
   const [tags, setTags] = useState<{name: string}[]>([]);
 
-  const apiUrl = 'http://c3edu.online:11434/api';
-  // const apiUrl = 'http://c3edu.online/backend/v1/micropal/chat';
-
+  // const apiUrl = 'http://c3edu.online:11434/api';
+  // const apiUrl = 'http://c3edu.online/backend/v1/micropal';
+  // const apiEndpointTags = `http://c3edu.online:11434/api/tags`;
+  const apiEndpointTags = `http://c3edu.online/backend/v1/micropal/chat/ollama-tags`;
+  const apiEndpointGenerate = `http://c3edu.online:11434/api/generate`;
+  
   const handleCancel = () => {
     if (editableIndex !== null) {
       setEditableText(history[editableIndex]?.prompt || '');
@@ -66,7 +69,7 @@ function App() {
       })
     };
 
-    const response = await fetch(`http://c3edu.online/backend/v1/micropal/chat/generate`, requestOptions);
+    const response = await fetch(apiEndpointGenerate, requestOptions);
     const reader = response.body?.getReader();
 
     if (reader) {
@@ -102,12 +105,12 @@ function App() {
   };
 
   useEffect(() => {
-    fetch(`${apiUrl}/tags`)
+    fetch(apiEndpointTags)
     .then((response) => response.json())
     .then((data: {models: any[]}) => {
       setTags(data.models);
     });
-  }, []);
+  }, [apiEndpointTags]);
 
   useEffect(() => {
     // if latest message is from the user, call sendPrompt
