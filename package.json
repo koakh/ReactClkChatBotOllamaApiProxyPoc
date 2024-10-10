@@ -1,5 +1,5 @@
 {
-  "name": "react-ollama",
+  "name": "react-clk-chat-bot-ollama-api-proxy-poc",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
