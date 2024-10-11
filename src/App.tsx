@@ -70,11 +70,10 @@ function App() {
     }
   };
 
-
   const sendPrompt = useCallback(async () => {
     setLoading(true);
 
-    let tempHistory = [...history, { prompt: '', type: 'assistant' as 'assistant', timestamp: Date.now() }];
+    const tempHistory = [...history, { prompt: '', type: 'assistant' as const, timestamp: Date.now() }];
 
     setHistory(tempHistory);
     const tempIndex = tempHistory.length - 1;
