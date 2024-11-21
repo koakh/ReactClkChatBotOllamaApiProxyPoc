@@ -14,7 +14,8 @@ body {
 }
 
 .disabled {
-  background-color: #dbdbdb;
+  /* used in history wrapper */
+  background-color: #efefef;
 }
 
 .history-container {
@@ -32,17 +33,19 @@ body {
 }
 
 .message.user {
-  background-color: #bcdbdb;
+  background-color: rgb(250, 240, 240);
   border: 1px solid #ccc;
   border-radius: 8px;
   margin-bottom: 15px;
+  margin-rigth: 30px;
 }
 
 .message.assistant {
-  background-color: #dbdbbc;
+  background-color: rgb(240, 240, 250);
   border: 1px solid #ccc;
   border-radius: 8px;
   margin-bottom: 15px;
+  margin-left: 30px;
 }
 
 .input-text {
